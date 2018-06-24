@@ -1,0 +1,121 @@
+﻿@model WebApplication1.Models.tblUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <style>
+        /* Styles for validation helpers
+        -----------------------------------------------------------*/
+        .field-validation-error {
+            color: #f00;
+        }
+
+        .field-validation-valid {
+            display: none;
+        }
+
+        .input-validation-error {
+            border: 1px solid #f00;
+            background-color: #fee;
+        }
+
+        .validation-summary-errors {
+            font-weight: bold;
+            color: #f00;
+        }
+
+        .validation-summary-valid {
+            display: none;
+        }
+    </style>
+
+
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Content/Validate.css" rel="stylesheet" />*@
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+    <div style="margin: 50px auto; width: 700px">
+        <div style="width: 700px">
+            <div class="panel panel-success animated jello ">
+                <div class="panel-heading">
+                    <h3 class="auto-style2"><strong>User Details</strong></h3>
+                </div>
+
+                <div class="panel-body transparent">
+
+
+
+                    <div>
+
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Userid)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Userid)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Username)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Username)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Password)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Password)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Usertype)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Usertype)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Fullname)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Fullname)
+                            </dd>
+                            <p>
+                                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-warning" })
+                            </p>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿body {
+    background: url(/images/employee.jpg);
+    /*background: linear-gradient(black, white);*/
+    /*  background: radial-gradient(circle, black, white);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.transparent {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.panel {
+    background-color: transparent;
+    border: 1px #222;
+}

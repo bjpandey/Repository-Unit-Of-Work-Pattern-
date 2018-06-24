@@ -1,0 +1,130 @@
+﻿@model WebApplication1.Models.tblUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <style>
+          /* Styles for validation helpers
+        -----------------------------------------------------------*/
+          .field-validation-error {
+              color: #f00;
+          }
+
+          .field-validation-valid {
+              display: none;
+          }
+
+          .input-validation-error {
+              border: 1px solid #f00;
+              background-color: #fee;
+          }
+
+          .validation-summary-errors {
+              font-weight: bold;
+              color: #f00;
+          }
+
+          .validation-summary-valid {
+              display: none;
+          }
+    </style>
+
+
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Content/Validate.css" rel="stylesheet" />*@
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+    <div style="margin: 50px auto; width: 800px">
+        <div style="width: 800px">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="auto-style2"><strong>Delete User</strong></h3>
+                </div>
+
+                <div class="panel-body transparent">
+
+
+
+
+                    <div>
+
+                        <dl class="panel-body">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Userid)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Userid)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Username)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Username)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Password)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Password)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Usertype)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Usertype)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Fullname)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Fullname)
+                            </dd>
+
+                        </dl>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Delete" class="btn btn-default" /> 
+                                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-info" })
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

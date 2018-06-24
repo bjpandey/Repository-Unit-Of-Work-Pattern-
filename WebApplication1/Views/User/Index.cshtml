@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WebApplication1.Models.tblUser>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+   
+</head>
+<body>
+
+    <div style="margin:10px auto 10px auto; width:1350px">
+        <div style="width:1350px">
+            <div class="card text-white bg-info mb-3" style="max-width: 200rem;">
+                <div class="card-header"><strong> All Users</strong></div>
+                <div class="card-body">
+
+
+
+                    <p>
+                        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+                    </p>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Userid)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Username)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Password)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Usertype)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Fullname)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Userid)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Username)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Password)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Usertype)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Fullname)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new {  id=item.Userid },new { @class = "btn btn-outline-success"}) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.Userid }, new { @class = "btn btn-outline-warning" }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Userid }, new { @class = "btn btn-outline-danger" })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
