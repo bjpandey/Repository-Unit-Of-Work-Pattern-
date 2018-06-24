@@ -11,4 +11,5 @@
           3 Users CRUD = 1 Logical unit of work
 
 
-#Note: Application (CRUD) => In Memory Collection (Business Object) => Database (1 Trancation or 1 go ,results commit or fail all operation)        
+#Note: 
+Application (CRUD) => In Memory Collection (Business Object) => Database (1 Trancation or 1 go ,results commit or fail all operation)        
