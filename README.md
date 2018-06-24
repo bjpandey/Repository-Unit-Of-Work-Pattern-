@@ -12,4 +12,4 @@
 
 
 #Note 
-Application (CRUD) => In Memory Collection(Business Object) => Database(1 Trancation or 1 go ,results commit or fail )        
+Application (CRUD) => In Memory Collection(Business Object) => Database(1 Trancation/1 go ,results commit or fail)        
