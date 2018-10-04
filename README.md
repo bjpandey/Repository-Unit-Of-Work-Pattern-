@@ -4,7 +4,7 @@
 
 #Getting Started with Visual Studio Environment and SSMS
 
-#Prerequisites You need development environment Visual Studio and SQL Infrastructure Environment i.e. SSMS
+#Prerequisites You need development environment Visual Studio and SQL Infrastructure Environment i.e. SQL Server Management Stdio
 
 #Example  1 Unit of work = Modified records in a transaction
           1 User CRUD = 1 unit of work
